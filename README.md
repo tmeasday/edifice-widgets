@@ -1,14 +1,14 @@
 Edifice Widgets + Traits
 ========================
 
-edifice-widgets is the part of the [edifice project](https://github.com/tmeasday/edifice) which allows simple unobtrusive javascript widgets and traits to allow you to make pages dynamic without writing any javascript boilerplate.
+edifice-widgets is the part of the [edifice project](https://github.com/tmeasday/edifice) which allows simple unobtrusive javascript behaviours to allow you to make pages dynamic, whilst avoiding unnecessary boilerplate.
 
-Note that it does not depend on edifice (although it does depend on jQuery), although it complements it well. Also note that it doesn't depend on rails---the javascript files can be used in isolation, we just package them this way this is the only way we use them.
+Note that it does not depend on edifice although it complements it well. Also note that it doesn't depend on rails---the javascript files can be used in isolation if you want. It does depend on jQuery.
 
 Traits -- unobtrusive JS behaviours
 -----------------------------------
 
-Traits are best explained through example. Suppose you have a input field that you'd like to automatically select all when clicked on (for example a field containing an embed code). If we define:
+Traits are best explained through example. Suppose you have a input field that you'd like to automatically select all when clicked on (for example github's repository URL field). If we define:
 
     $.edifice_traits.always_select_all = function() {
       return this.bind('click select focus focusin', function() {
@@ -22,19 +22,21 @@ Then we can use such a behaviour with:
 
 edifice-widgets will ensure that the code is attached to the `input` and everything behaves as you'd expect.
 
-You can define more than one trait for an element (separate them with spaces, as you would CSS classes). For that reason, as a rule, it is best if traits remain very simple, and don't alter the internal HTML structure of the element. Otherwise bugs are sure to happen when you combine them.
+You can define more than one trait for an element (separate them with spaces, as you would CSS classes). For that reason, as a rule, it is best if traits remain very simple, and don't alter the internal HTML structure of the element. Otherwise bugs are bound to happen when you combine them.
 
 Widgets -- unobtrusive specialised elements
 -------------------------------------------
 
-If you need something more complex that will significantly alter the HTML, or which requires arguments, it is best to use a widget. For example, suppose you want to create a styled select. You might want to write something as simple, and have JS rewrite it into a complex HTML structure. If we write:
+If you need something more complex that will significantly alter the HTML, or which requires arguments, it is best to use a widget. For example, suppose you want to create a styled select. Suppose we want to use it all over our website.
+
+Then we want to write the minimum of HTML above what we would to use a vanilla select, and let the JS framework take care of hooking things together. edifice-widgets lets us write simply:
 
     <select name="country" data-widget="select">
       <option value="au">Australia</option>
       <option value="us">USA</option>
     </select>
 
-We can write a `select` widget, which goes something like:
+To enable this, we can write a `select` widget, which goes something like:
     
     // note this code is basically untested psuedo-code
     $.edifice_widgets.select = function() {
