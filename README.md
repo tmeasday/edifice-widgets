@@ -79,6 +79,7 @@ To access the option easily, use the `.read_options` method:
     })
 
 Use `$edifice_widgets.REQUIRED` to indicate that a setting is required:
+
     var settings = $(this).read_options({
       'autosubmit_url': $.edifice_widgets.REQUIRED
     });
