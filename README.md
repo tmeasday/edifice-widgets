@@ -1,9 +1,18 @@
 Edifice Widgets + Traits
 ========================
 
-edifice-widgets is the part of the [edifice project](https://github.com/tmeasday/edifice) which allows simple unobtrusive javascript behaviours to allow you to make pages dynamic, whilst avoiding unnecessary boilerplate.
+Edifice-widgets is a companion gem to [edifice](/tmeasday/edifice) which allows simple unobtrusive javascript behaviours, allowing you to make pages dynamic, whilst avoiding unnecessary boilerplate.
 
 Note that it does not depend on edifice although it complements it well. Also note that it doesn't depend on rails---the javascript files can be used in isolation if you want. It does depend on jQuery.
+
+Installation
+------------
+
+To install, simply add to your Gemfile:
+
+```ruby
+gem 'edifice-widgets'
+```
 
 Traits -- unobtrusive JS behaviours
 -----------------------------------
