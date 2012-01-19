@@ -14,6 +14,15 @@ To install, simply add to your Gemfile:
 gem 'edifice-widgets'
 ```
 
+
+To include the javascript, add to your application.js:
+
+```js
+/*
+ *= require edifice-widgets
+ */
+```
+
 Traits -- unobtrusive JS behaviours
 -----------------------------------
 
