@@ -7,10 +7,10 @@ Gem::Specification.new do |s|
   s.version     = Edifice::Widgets::VERSION
   s.authors     = ["Tom Coleman"]
   s.email       = ["tom@thesnail.org"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
-
+  s.homepage    = "http://edifice-rails.com"
+  s.summary     = %q{Edifice-widgets is a companion gem to edifice which allows simple unobtrusive javascript behaviours.}
+  s.description = %q{Edifice-widgets is a companion gem to edifice which allows simple unobtrusive javascript behaviours, allowing you to make pages dynamic, whilst avoiding unnecessary boilerplate.}
+  
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
