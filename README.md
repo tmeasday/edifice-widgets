@@ -120,5 +120,5 @@ var settings = $(this).read_options({
 License
 -------
 
-Edifice is crafted by [Percolate Studio](http://percolatestudio.com) and released under the [MIT license](www.opensource.org/licenses/MIT)
+[Edifice](http://edifice-rails.com) is crafted by [Percolate Studio](http://percolatestudio.com) and released under the [MIT license](www.opensource.org/licenses/MIT)
 
